@@ -56,7 +56,7 @@ const Navbar = () => {
             },
           }}
         >
-          Sociopedia
+          Magoon
         </Typography>
         {isNonMobileScreens && (
           <FlexBetween
