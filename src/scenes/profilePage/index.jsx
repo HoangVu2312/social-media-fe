@@ -11,6 +11,7 @@ import UserWidget from "scenes/widgets/UserWidget";
 const ProfilePage = () => {
   const [user, setUser] = useState(null);
   const { userId } = useParams();
+    console.log(userId)
   const token = useSelector((state) => state.token);
   const isNonMobileScreens = useMediaQuery("(min-width:1000px)");
 
