@@ -35,6 +35,8 @@ const MyPostWidget = ({ picturePath }) => {
   const token = useSelector((state) => state.token);
   const isNonMobileScreens = useMediaQuery("(min-width: 1000px)");
   const mediumMain = palette.neutral.mediumMain;
+  const light = palette.primary.light;
+  const dark = palette.primary.dark;
   const medium = palette.neutral.medium;
 
   const handlePost = async () => {
@@ -122,7 +124,7 @@ const MyPostWidget = ({ picturePath }) => {
 
       <FlexBetween>
         <FlexBetween gap="0.25rem" onClick={() => setIsImage(!isImage)}>
-          <ImageOutlined sx={{ color: mediumMain }} />
+          <ImageOutlined sx={{ color: light }} />
           <Typography
             color={mediumMain}
             sx={{ "&:hover": { cursor: "pointer", color: medium } }}
@@ -134,17 +136,17 @@ const MyPostWidget = ({ picturePath }) => {
         {isNonMobileScreens ? (
           <>
             <FlexBetween gap="0.25rem">
-              <GifBoxOutlined sx={{ color: mediumMain }} />
+              <GifBoxOutlined sx={{ color: light }} />
               <Typography color={mediumMain}>Clip</Typography>
             </FlexBetween>
 
             <FlexBetween gap="0.25rem">
-              <AttachFileOutlined sx={{ color: mediumMain }} />
+              <AttachFileOutlined sx={{ color: light }} />
               <Typography color={mediumMain}>Attachment</Typography>
             </FlexBetween>
 
             <FlexBetween gap="0.25rem">
-              <MicOutlined sx={{ color: mediumMain }} />
+              <MicOutlined sx={{ color: light }} />
               <Typography color={mediumMain}>Audio</Typography>
             </FlexBetween>
           </>
@@ -158,7 +160,7 @@ const MyPostWidget = ({ picturePath }) => {
           disabled={!post}
           onClick={handlePost}
           sx={{
-            color: palette.background.alt,
+            color: dark,
             backgroundColor: palette.primary.main,
             borderRadius: "3rem",
           }}

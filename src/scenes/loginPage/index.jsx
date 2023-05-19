@@ -4,6 +4,7 @@ import Form from "./Form";
 const LoginPage = () => {
   const theme = useTheme();
   const isNonMobileScreens = useMediaQuery("(min-width: 1000px)");
+  const { palette } = useTheme();
   return (
     <Box>
       <Box
@@ -12,8 +13,8 @@ const LoginPage = () => {
         p="1rem 6%"
         textAlign="center"
       >
-        <Typography fontWeight="bold" fontSize="32px" color="primary">
-          Sociopedia
+        <Typography fontWeight="bold" fontSize="32px" color={palette.primary.light}>
+          Magoon
         </Typography>
       </Box>
 
